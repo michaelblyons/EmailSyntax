@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>eml</string>
+	</array>
+	<key>name</key>
+	<string>Email</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\b(?:\d{1,3}\.){3}\d{1,3}\b</string>
+			<key>name</key>
+			<string>constant.numeric.ip.v4</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?:[A-Fa-f0-9]{1,4}::?){4,7}[A-Fa-f0-9]{0,4}\b</string>
+			<key>name</key>
+			<string>constant.numeric.ip.v6</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[\w+-/]+(?:\.[\w+-/]+)*@[\w+-]+(?:\.[\w+-]+)*(?:\.[a-zA-Z]{2,8})</string>
+			<key>name</key>
+			<string>markup.underline.link.email</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[Ff]rom: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.from</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[Tt]o: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.to</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[Cc]{2}: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.cc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[Bb][Cc]{2}: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.bcc</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.subject</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^[Ss]ubject: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.subject</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language.date</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>https://tools.ietf.org/html/rfc2822#section-3.3</string>
+			<key>match</key>
+			<string>^[Dd]ate: ?(.*)</string>
+			<key>name</key>
+			<string>entity.name.tag.header.date</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>=(?:[A-F0-9]{2}|\r?\n)</string>
+			<key>name</key>
+			<string>constant.character.quotedprintable</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.email</string>
+	<key>uuid</key>
+	<string>a88473cd-5d74-46d2-8c42-39af7995c343</string>
+</dict>
+</plist>
