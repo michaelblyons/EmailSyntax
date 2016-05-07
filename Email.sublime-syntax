@@ -10,11 +10,25 @@ file_extensions:
 scope: text.email
 contexts:
   main:
-    - include: common
     - include: header
     - include: body
+    - include: common
 
   header:
+    - match: '^'
+      scope: test
+      push:
+        - meta_scope: meta.header
+        - match: '(\r?\n){2,}'
+          pop: true
+        - include: header-tags
+
+  header-tags:
+    - match: '^(\w+)(:) ?(.*)'
+      captures:
+        1: entity.name.tag.email
+        2: punctuation.separator.colon
+        3: tag-content
     - match: '^[Ff]rom: ?(.*)'
       scope: entity.name.tag.from
     - match: '^[Tt]o: ?(.*)'
