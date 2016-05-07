@@ -1,7 +1,7 @@
 # EmailSyntax
-`.tmLanguage` syntax highlighting for `.eml` files.
+`.sublime-syntax` highlighting for `.eml` files.
 
-I discovered by accident that [Kate][] had syntax highlighting for emails in their raw format, and decided that'd be a nice thing for the text editors that I use. I expected that someone had already made a `.tmLanguage` for it, but after poking around the internet for the third or fourth time, I only found people like myself _asking_ about whether one existed.
+I discovered by accident that [Kate][] had syntax highlighting for emails in their raw format, and decided that'd be a nice thing for the text editors that I use. I expected that someone had already made a `.tmLanguage` (or similar) for it, but after poking around the internet for the third or fourth time, I only found people like myself _asking_ about whether one existed.
 
 So I started on one. It's not great, but I decided to check it in before I start on [splitting the email into regions with their own syntax][iss4].
 
