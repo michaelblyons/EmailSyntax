@@ -4,7 +4,7 @@ Received: from mail-server1.example.com ([fe80::dc1a:5d09:5850:8e46]) by
  mail-server1.example.com ([::1]) with mapi id 17.03.0165.001; Fri, 7 Nov 2014
  15:29:17 -0500
 From: "Abernathy, Alice" <Alice.Abernathy@mail.example.com>
-To: "Leary, Timothy" <tim.leary@mail.example.com>
+To: "Boland, Bob" <bob.boland@mail.example.com>
 Subject: I thought Coelecanths were gone.
 Thread-Topic: I thought Coelecanths were gone.
 Thread-Index: AQHP9T437ZRI73Ovdkeen+5TnQ7HPpxVqHsQ
@@ -20,20 +20,16 @@ X-MS-Has-Attach: yes
 X-MS-Exchange-Organization-SCL: -1
 X-MS-TNEF-Correlator: 
 Content-Type: multipart/related;
-    boundary="_004_328068A6A2D2E54C914A6866D73F84921AD53554";
+    boundary="_000_328068A6A2D2E54C914A6866D73F84921AD53554";
     type="multipart/alternative"
 MIME-Version: 1.0
-
---_004_328068A6A2D2E54C914A6866D73F84921AD53554
-Content-Type: multipart/alternative;
-    boundary="_000_328068A6A2D2E54C914A6866D73F84921AD53554"
 
 --_000_328068A6A2D2E54C914A6866D73F84921AD53554
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
 
-From: Cecil Coelecanth [mailto:cecil@fossilexample.com]
+From: Cecil Coelecanth [mailto:cecil@fossil.example.com]
 Sent: Friday, October 31, 2014 3:15 PM
 To: Abernathy, Alice
 Subject: I'm still around
@@ -63,7 +59,7 @@ body{
 </head>
 <body>
 <p>
-    <b>From:</b> Cecil Coelecanth [mailto:cecil@fossilexample.com]<br/>
+    <b>From:</b> Cecil Coelecanth [mailto:cecil@fossil.example.com]<br/>
     <b>Sent:</b> Friday, October 31, 2014 3:15 PM<br/>
     <b>To:</b> Abernathy, Alice<br/>
     <b>Subject:</b> I'm still around
@@ -76,18 +72,3 @@ body{
 
 
 --_000_328068A6A2D2E54C914A6866D73F84921AD53554--
---_004_328068A6A2D2E54C914A6866D73F84921AD53554
-Content-Type: image/png; name="image001.png"
-Content-Description: image001.png
-Content-Disposition: inline; filename="image001.png"; size=174;
-    creation-date="Fri, 07 Nov 2014 20:29:16 GMT";
-    modification-date="Fri, 07 Nov 2014 20:29:16 GMT"
-Content-ID: <image001.png@01CFFA9F.972E4610>
-Content-Transfer-Encoding: base64
-
-iVBORw0KGgoAAAANSUhEUgAAACkAAAAcCAMAAADLCWbaAAAAAXNSR0ICQMB9xQAAAANQTFRFAAAA
-p3o92gAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAE1p
-Y3Jvc29mdCBPZmZpY2V/7TVxAAAAEklEQVQ4y2NgGAWjYBSMgsEFAASYAAEwai57AAAAAElFTkSu
-QmCC
-
---_004_328068A6A2D2E54C914A6866D73F84921AD53554--
