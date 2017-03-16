@@ -8,10 +8,14 @@ name: Email
 file_extensions:
   - eml
 scope: text.email
+
+variables:
+  non_capturing_boundary: '(?=^--\w+(--)?$)'
+
 contexts:
   main:
     - include: body
-    #- include: header
+    # - include: header
     - include: common
 
   header:
@@ -53,27 +57,33 @@ contexts:
         1: entity.separator.boundary.email
       push:
         - meta_scope: meta.region.body.email
-        - match: '^--\2--$' 
+        - match: '^--\w+--$' # It would be nice to use a backref instead of \w+ for this and subsequent boundary matches
+          scope: entity.separator.boundary.end.email
+          comment: Final body boundary
           pop: true
         - match: '^Content-Type: ?text\/html;'
           push:
-            - match: '^--\2$'
+            - meta_content_scope: text.html.embedded
+            - match: '{{non_capturing_boundary}}'
               pop: true
             - include: scope:text.html.basic
         - match: '^Content-Type: ?text\/plain;'
           push:
-            - match: '^--\2$'
+            - meta_content_scope: text.plain.embedded
+            - match: '{{non_capturing_boundary}}'
               pop: true
             - include: scope:text.plain
-        - match: '^Content-Type: ?text\/quoted-printable;'
-          push:
-            - match: '^--\2$'
-              pop: true
-            - match: '=(?:[A-F0-9]{2}|\r?\n)'
-              scope: constant.character.quoted-printable
+            - include: common
+        # - match: '^Content-Type: ?text\/quoted-printable;' # quoted-printable is in Content-Transfer-Encoding
+        #   push:
+        #     - meta_content_scope: text.quoted-printable.embedded
+        #     - match: '{{non_capturing_boundary}}'
+        #       pop: true
+        #     - match: '=(?:[A-F0-9]{2}|\r?\n)'
+        #       scope: constant.character.quoted-printable
         - match: '^Content-Type: ?multipart\/alternative;'
           push:
-            - match: '^--\2$'
+            - match: '{{non_capturing_boundary}}'
               pop: true
             - include: body
 
